@@ -1,0 +1,125 @@
+WebDriver:-->
+
+	=> Native browser automation API.It automate multiple browsers without help of proxy support.
+
+Advantages:-->
+	=> WebDriver built with object oriented programming features   [OOPS]
+	=> WebDriver handle dynamic changes.
+	=> Default synchronization timeout on pageload, And other timeouts to manage webdruver
+			support advance wait commands like  [Implicit, Explicit, Fluent]
+	=> Partial handling on Alert [Popus]
+	=> Mobile interface automation  [Appium]
+	=> support behaviour data driven framework [Cucumber]
+
+============================================================================================
+WebDriver-java:---> Download's required to configure webdriver
+
+	=> Java Developement kit  [JDK 1.8 above]
+	=> Eclipse IDE            [java developement version] 
+	=> webdriver-libraries    [java language]
+
+Note:--> Before JDK and Eclipse please find system hotspot size 
+	[32 or 64 bit].
+
+	Create oracle account
+
+Download JDK 1.8 :-->
+	=> Google:-->   Java SE Development Kit 8 - Downloads - Oracle
+	=> URL:--> https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+	=> Under development kit << accept license agreement >> radio button.
+	=> download .exe file for windows w.r.t  hotspot size 
+	=> privide oracle login details before download
+	=> it is executable jar file use double click to start installation.
+	=> Follow installation process until receive close button.
+================================================================================================>>
+How to verify java successfull installation:-->
+
+	=> open command prompt and type
+	=> java -version
+
+	Note:--> After typing this command it display  java version and hotspot size exist in your computer.
+
+=====================================================================================================>
+Setup environment path:--> [windows 10 OS]
+
+	        ---> Right click on This PC --> Select properties
+		---> click on <<advanced system settings>>
+		---> click on <<Envirionment variable>> button
+		---> under System variable  select path and click edit  button
+		---> click Add button
+		---> copy bin location of JDK path
+	
+		path :-->C:\Program Files\Java\jdk1.8.0_65\bin
+
+====================================================================
+Eclipse:-->   Opensource editor it supports many platform.
+	
+	Google:-->  Mars 2 | Eclipse Packages
+	URL     :-->  http://www.eclipse.org/downloads/packages/release/mars/2
+	           
+	=> Download eclipse  ---> Eclipse IDE for Java Developers
+	=> Choose operating system and hotspot size.
+	=> Download zip format file 
+	=> After download unzip file to backup drive.
+	=> After unzip we receive eclipse folder and folder contains 
+			eclipse Application ICON.
+===============================================================================
+Download webdriver libraries:-->
+
+	Download Selenium-webdriver:--->
+
+	URL:--> https://www.seleniumhq.org/
+	=> click on download tab
+	=> Under Selenium Client & WebDriver Language Bindings
+	=> choose language [java] and click on download button.
+	=> System ask zip format file to download.
+	=> Save file into backup drive.
+===================================================================================>>
+Create Workspace:-->
+		=> Workspace store your projects..
+		=> Create Empty folder at any drive and name it as <<Selenium-Workspace>>
+		=> Create sub folder and name it as <<library >>
+		=> Dump all selenium support libraries into library folder.
+=====================================================================
+
+Launch eclipse using above workspace:-->
+		
+		=> double click on eclipse ICON
+		=> browse workspace click on ok button
+====================================================================
+Create java project in eclipse:-->
+	
+	=> Open Eclipse  choose file menu --->New option ---> Select projects
+	--> Open java folder  --> Select java project and click next button
+	--> Enter project name and click on finish.
+
+
+Configure JRE libraries for [Java 10+]
+
+	=> Select Project
+	=> Select eclipse menu --> Project --->Select Properties
+	=> Select Java buildpath under properties window
+	=> Select libraries tab
+	=> click Add library button
+	=> Select JRE system library and click Next button
+	=> select tag alternate environment
+	=> Click Finish 
+
+====================================================================
+Configure webdriver jar files to java project:-->
+
+	Under project --> Right click on JRE system libraries --> use build
+	path and configure build path ---> Click Add External jars button
+	--> Browser all selenium libraries....
+===================================================================
+
+
+
+
+
+
+
+
+
+
+
