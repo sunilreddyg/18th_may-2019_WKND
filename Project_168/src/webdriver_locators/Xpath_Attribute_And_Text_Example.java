@@ -9,8 +9,10 @@ public class Xpath_Attribute_And_Text_Example {
 	public static void main(String[] args) throws InterruptedException 
 	{
 		
-		//Set runtime environment variable for chromedriver
-		System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
+		//Set location of chromedriver before launch chrome browser..
+		String path="E:\\18th_may_2019_WKND\\selenium_drivers\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", path);
+		
 		//Brower initiation
 		WebDriver driver=new ChromeDriver();
 		//load webpage into browser window
