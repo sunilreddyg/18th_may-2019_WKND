@@ -14,6 +14,9 @@ public class IsDisplayed_For_Static_Elements
 
 	public static void main(String[] args) 
 	{
+		//Set location of chromedriver before launch chrome browser..
+		String path="E:\\18th_may_2019_WKND\\selenium_drivers\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", path);
 		
 		WebDriver driver=new ChromeDriver();
 		driver.get("http://gmail.com/");
@@ -38,26 +41,25 @@ public class IsDisplayed_For_Static_Elements
 		 */
 		
 		
-		try {
-			
-			WebElement Next_btn=driver.findElement(By.id("Next_button"));
-			Next_btn.click();
-		
-		} catch (NoSuchElementException e) {
-			e.printStackTrace();
-		}catch (ElementNotVisibleException e) {
-			e.printStackTrace();
-		}catch (InvalidElementStateException e) {
-			e.printStackTrace();
-		}
 		
 		
 		
-		
-		
-		System.out.println("Run continued");
 	
-			
+			try {
+				WebElement password_eb=driver.findElement(By.id("password"));
+				password_eb.clear();
+				password_eb.sendKeys("Hello");
+				
+				
+			} catch (NoSuchElementException e) {
+				e.printStackTrace();
+			}
+			catch (ElementNotVisibleException e) {
+				e.printStackTrace();
+			}
+			catch (InvalidElementStateException e) {
+				e.printStackTrace();
+			}
 			
 		
 		

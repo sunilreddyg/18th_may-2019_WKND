@@ -16,10 +16,15 @@ public class Runtime_IsSelected
 		 * 	Steps:-->
 		 * 		launch browser and load cleartrip webpage
 		 * 		click roundtrip radio button.
+		 * 	precondition:--> 
 		 * 		make sure roundtrip radio button selected.
 		 * 	Expected:-->
 		 * 		system should display return date container
 		 */
+		
+		//Set location of chromedriver before launch chrome browser..
+		String path="E:\\18th_may_2019_WKND\\selenium_drivers\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", path);
 		
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.cleartrip.com/flights");
@@ -27,14 +32,14 @@ public class Runtime_IsSelected
 		
 		//click roundtrip radio button
 		WebElement Roundtrip=driver.findElement(By.xpath("//input[@value='RoundTrip']"));
-		Roundtrip.click();
+		//Roundtrip.click();
 		
-		WebElement returndate=null;
+		
 		//Condition to accep on roundtrip selection
 		if(Roundtrip.isSelected())
 		{
 			//target Return date container
-			returndate=driver.findElement(By.id("ReturnDate"));
+			WebElement returndate=driver.findElement(By.id("ReturnDate"));
 			
 			//Write condition statement
 			if(returndate.isDisplayed())
@@ -49,35 +54,6 @@ public class Runtime_IsSelected
 		
 		
 		
-		/*
-		 * Testcase:-->
-		 * 		verify triptype functionality for Oneway
-		 * 	Steps:-->
-		 * 		launch browser and load cleartrip webpage
-		 * 		select oneway radio button
-		 * 	Expected:-->
-		 * 		system should hide return date container 
-		 */
-		
-		//click oneway radio button
-		WebElement oneway=driver.findElement(By.xpath("//input[@value='OneWay']"));
-		oneway.click();
-		
-		
-		if(oneway.isSelected())
-		{
-			
-			//accept condition on element hidden status
-			if(!returndate.isDisplayed())  //!--NOT
-				System.out.println("As expected return date hidden on oneway selection");
-			else
-				System.err.println("Return date visible on onway selection");
-		
-		}
-		else
-			System.err.println("Precondition failed oneway not selected");
-		
-
 		
 		Thread.sleep(5000);
 		driver.close();

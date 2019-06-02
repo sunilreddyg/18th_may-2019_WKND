@@ -3,6 +3,7 @@ package validationcommands;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class IsDisplayed_For_Runtime_Elements 
@@ -10,8 +11,11 @@ public class IsDisplayed_For_Runtime_Elements
 
 	public static void main(String[] args) throws Exception 
 	{
+		//Set location of chromedriver before launch chrome browser..
+		String path="E:\\18th_may_2019_WKND\\selenium_drivers\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", path);
 		
-		WebDriver driver=new FirefoxDriver();
+		WebDriver driver=new ChromeDriver();
 		driver.get("http://cleartrip.com/");
 		driver.manage().window().maximize();
 		

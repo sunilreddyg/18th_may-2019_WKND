@@ -17,6 +17,9 @@
 					
 						boolean flag=Element.isDisplayed();
 						system.out.println("Element visible Status  "+flag);
+						
+						
+	Exception:--> ElementNotvisibleException   ==> When user perform action on hidden element  
 =========================================================================		
 =>IsEnabled:-->
 				Method verify element enabled or disabled status
@@ -29,6 +32,8 @@
 					
 					boolean flag=Element.IsEnabled();
 					System.out.println("Element Enabled "+flag);
+					
+					
 =====================================================================							
 =>IsSelected:-->
 			Method return true/false  on element selection state
