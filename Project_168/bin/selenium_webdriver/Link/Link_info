@@ -1,0 +1,55 @@
+How to identify link at webpage and Click link using webdriver command:--->
+==========================================================================
+
+	Note:--> In WebApplication every link contains  anchor tag  <a> at 
+			backend html source, And link contains href and title properties 
+			as unique identifications..
+
+	Note:--> WebDriver have two unique locator builders to 
+				idnetify a link at webpage using linkname..
+
+					Linktext  &  Partiallinktext
+					By.Linktext("linkname");
+					By.partialinktext("partiallinktext");
+
+	
+	LInktext       :--> Only accept original linkname
+	Partiallinktext:--> Accept both original linkname and partiallink-name.
+
+
+============================================================================>
+Example:--> Identify link
+
+Link Htmlsource:-->
+
+		<a  href="http://signup.com" > Signup </a>
+
+ WebDriver syntax:-->
+
+		driver.findElement(By.Linktext("Signup"))).click();
+================================================================================
+Example:--> Identify link
+
+Link Htmlsource:-->
+
+		<a  href="http://signup.com" > 
+			<span> Create Account </span>
+		</a>
+
+WebDriver syntax:-->
+
+		driver.findElement(By.Linktext("Create Account"))).click();
+==============================================================================
+Example:--> Identify link when link name available in different html nodes.
+
+Link Htmlsource:-->
+
+		<a  href="http://newjobs.com" > 
+			<span> Create new job </span>
+			<strong> ,for experience </strong>
+		</a>
+
+WebDriver syntax:-->
+
+		driver.findElement(By.partialinktext(",for experience"))).click();
+==================================================================================

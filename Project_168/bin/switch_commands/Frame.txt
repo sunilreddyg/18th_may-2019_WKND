@@ -1,0 +1,43 @@
+Frame:--->
+
+	=> Frame is a part of webpage and it load content independently like webpage.
+	=> Frame had ability to load content independently.
+
+HtmlSource:-->
+
+	<hmtl>
+	<body>
+		<div id="Container" class="ABC">
+			<input id="email"  type="text">
+		</div>
+
+		<frame id="Pwd_frame">
+			<html>
+			<body>
+				<div id="pwd_container" class="xyz">
+					<input id="password" type="password">
+				</div>
+			</body>
+			</html>
+		</frame>
+
+	</body>
+	</hmtl>
+
+
+Example:--> Identify password element under frame..
+
+
+	driver.switchTo().frame("Pwd_frame");
+	driver.findElement(By.id("password"));
+
+
+	Note:--> Under frame  any element to identify 
+		we must switch controls from mainpage source to frame source.
+
+===========================================================================================================
+		
+
+
+
+
