@@ -1,6 +1,7 @@
 package findelements;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,6 +21,7 @@ public class DataPicker_Click_ActiveDates
 		System.setProperty("webdriver.chrome.driver", path);
 
 		WebDriver driver=new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("https://www.cleartrip.com/trains");
 		driver.manage().window().maximize();
 		
@@ -30,9 +32,9 @@ public class DataPicker_Click_ActiveDates
 		Thread.sleep(3000);
 		
 	
-		//Iterate for 4 times
-		for (int i = 0; i < 6; i++) 
+		for (int i = 0; i < 5; i++) 
 		{
+			
 			
 			//Identify Active month calendar
 			WebElement Active_Month;
@@ -42,9 +44,6 @@ public class DataPicker_Click_ActiveDates
 			List<WebElement> Active_links;
 			Active_links=Active_Month.findElements(By.tagName("a"));
 			
-			
-			
-			//Iterate for number of active link under current month
 			for (int j = 0; j < Active_links.size(); j++) 
 			{
 				//Get Each Acive link using dynamic loop
@@ -58,8 +57,7 @@ public class DataPicker_Click_ActiveDates
 				Active_links=Active_Month.findElements(By.tagName("a"));
 			}
 			
-			
-			
+
 			//Click Next Button
 			WebElement Next_Month_Btn=driver.findElement(By.xpath("//a[contains(@title,'Next month')]"));
 			Next_Month_Btn.click();
@@ -67,7 +65,7 @@ public class DataPicker_Click_ActiveDates
 			
 			
 			//Condition to target NextMonth
-			if(i==4)
+			if(i==3)
 			{
 				WebElement last_Month;
 				last_Month=driver.findElement(By.xpath("//div[@id='datePickerWrapper']/table[2]"));
@@ -79,7 +77,16 @@ public class DataPicker_Click_ActiveDates
 			
 			}
 			
+			
 		}
+			
+			
+			
+			
+			
+			
+			
+	
 		
 		
 		

@@ -12,6 +12,10 @@ public class WebTable_NextPage_Records {
 
 	public static void main(String[] args) 
 	{
+		//Set location of chromedriver before launch chrome browser..
+		String path="E:\\18th_may_2019_WKND\\selenium_drivers\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", path);
+		
 		
 		WebDriver driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
@@ -43,14 +47,14 @@ public class WebTable_NextPage_Records {
 			String Rowtext=Dynamic_row.getText();
 			System.out.println("=> "+Rowtext);
 			
+			icount=icount+1;
 			if(icount==20)
 			{
-				WebElement Next_btn=driver.findElement(By.xpath("//th[@class='table-page:next']"));
+				//Identify next button
+				WebElement Next_btn=driver.findElement(By.xpath("/html/body/form[1]/div[4]/div[1]/div[2]/div/div/div/form/div[4]/form/div[3]/div/div/div/table/tfoot/tr/th[3]"));
 				Next_btn.click();
 				icount=0;
 			}
-			
-			icount=icount+1;;
 			
 		}
 		

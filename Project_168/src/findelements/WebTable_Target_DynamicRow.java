@@ -11,7 +11,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class WebTable_Target_DynamicRow {
 
 	public static void main(String[] args)
-	{
+	{	
+		//Set location of chromedriver before launch chrome browser..
+		String path="E:\\18th_may_2019_WKND\\selenium_drivers\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", path);
+		
 		
 		//browser initiation
 		WebDriver driver=new ChromeDriver();
@@ -41,7 +45,7 @@ public class WebTable_Target_DynamicRow {
 			//Capture DynamicRow Text
 			String RowText=DynamicRow.getText();
 			
-			if(RowText.contains("RELIND"))
+			if(RowText.contains("TCS"))
 			{
 				System.out.println("Record exist at => "+i+" Row");
 				//Identify List of Cells under Each dynamic row

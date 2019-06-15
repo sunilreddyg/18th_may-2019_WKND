@@ -13,6 +13,10 @@ public class Webtable_Target_Referral_Cell_At_DynamicRows
 
 	public static void main(String[] args)
 	{
+		//Set location of chromedriver before launch chrome browser..
+		String path="E:\\18th_may_2019_WKND\\selenium_drivers\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", path);
+		
 		
 		WebDriver driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -41,7 +45,7 @@ public class Webtable_Target_Referral_Cell_At_DynamicRows
 			//Capture DynamicRow Text
 			String RowText=DynamicRow.getText();
 			
-			if(RowText.contains("HDFC"))
+			if(RowText.contains("SUNPHA"))
 			{
 				System.out.println("Record exist at => "+i+" Row");
 				//Identify List of Cells under Each dynamic row

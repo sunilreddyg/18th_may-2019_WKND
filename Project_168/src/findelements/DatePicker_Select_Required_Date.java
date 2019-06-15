@@ -35,7 +35,7 @@ public class DatePicker_Select_Required_Date
 		
 		boolean flag=false;
 		//Iterate for 4 times
-		for (int i = 0; i < 6; i++) 
+		for (int i = 0; i < 5; i++) 
 		{
 			
 			//Identify Active month calendar
@@ -86,7 +86,7 @@ public class DatePicker_Select_Required_Date
 			
 			
 			//Condition to target NextMonth
-			if(i==4)
+			if(i==3)
 			{
 				WebElement last_Month;
 				last_Month=driver.findElement(By.xpath("//div[@id='datePickerWrapper']/table[2]"));

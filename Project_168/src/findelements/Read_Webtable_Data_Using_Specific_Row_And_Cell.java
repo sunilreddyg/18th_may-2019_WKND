@@ -18,6 +18,11 @@ public class Read_Webtable_Data_Using_Specific_Row_And_Cell
 		 * Example:--> Read Data from webtable using specific and row and cell.
 		 */
 		
+		
+		//Set location of chromedriver before launch chrome browser..
+		String path="E:\\18th_may_2019_WKND\\selenium_drivers\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", path);
+		
 		//browser initiation
 		WebDriver driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

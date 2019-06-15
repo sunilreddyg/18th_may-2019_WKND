@@ -12,6 +12,9 @@ public class WebTable_Read_Data_from_DynamicRows
 
 	public static void main(String[] args) 
 	{
+		//Set location of chromedriver before launch chrome browser..
+		String path="E:\\18th_may_2019_WKND\\selenium_drivers\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", path);
 		
 		//browser initiation
 		WebDriver driver=new ChromeDriver();
