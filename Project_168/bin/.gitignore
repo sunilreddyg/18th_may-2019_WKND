@@ -1,3 +1,5 @@
+/method_parameters/
+/method_return_types/
 /browser_launch/
 /corejava/
 /database_Connection/
@@ -19,3 +21,4 @@
 /verification_Commands/
 /waitcommands/
 /webdriver_locators/
+/keyword_driven_Framework/
