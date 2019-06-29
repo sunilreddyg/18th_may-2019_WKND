@@ -61,7 +61,7 @@ public class Testng_Method_Dependencies
 		Reporter.log("email found at inbox");
 	}
 	
-	@Test(priority=6,dependsOnMethods={"ComposeEmail","User_login"})
+	@Test(priority=6,dependsOnMethods={"User_login","ComposeEmail"})
 	public void Verify_Email_At_Sentemails()
 	{
 		Assert.assertTrue(true);

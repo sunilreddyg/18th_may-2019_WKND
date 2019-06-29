@@ -1,5 +1,3 @@
-/method_parameters/
-/method_return_types/
 /browser_launch/
 /corejava/
 /database_Connection/
@@ -7,8 +5,10 @@
 /extent_reports/
 /findelements/
 /framework_junit/
-/framework_testng/
 /javascript/
+/keyword_driven_Framework/
+/method_parameters/
+/method_return_types/
 /mouse_and_keyboard_interactions/
 /pageobjects/
 /robot_actions/
@@ -21,4 +21,4 @@
 /verification_Commands/
 /waitcommands/
 /webdriver_locators/
-/keyword_driven_Framework/
+/framework_testng/
